@@ -1,4 +1,3 @@
-using System.Security.Cryptography;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using API.DTOs;
