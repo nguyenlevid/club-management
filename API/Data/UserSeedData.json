@@ -1,0 +1,152 @@
+[
+    {
+      "UserName": "Cheri",
+      "Gender": "female",
+      "KnownAs": "Rosales",
+      "DateOfBirth": "1986-02-05",
+      "Class": "Fuller",
+      "Created": "2022-06-27",
+      "LastActive": "2022-05-16",
+      "Photos": [
+        {
+          "Url": "https://randomuser.me/api/portrays/women/41.jpg",
+          "IsMain": true
+        }
+      ]
+    },
+    {
+      "UserName": "Elsa",
+      "Gender": "female",
+      "KnownAs": "Farmer",
+      "DateOfBirth": "1984-02-12",
+      "Class": "Shaffer",
+      "Created": "2022-06-01",
+      "LastActive": "2022-07-06",
+      "Photos": [
+        {
+          "Url": "https://randomuser.me/api/portrays/women/80.jpg",
+          "IsMain": true
+        }
+      ]
+    },
+    {
+      "UserName": "Adele",
+      "Gender": "female",
+      "KnownAs": "Johns",
+      "DateOfBirth": "1988-05-21",
+      "Class": "Mooney",
+      "Created": "2022-06-23",
+      "LastActive": "2022-05-05",
+      "Photos": [
+        {
+          "Url": "https://randomuser.me/api/portrays/women/22.jpg",
+          "IsMain": true
+        }
+      ]
+    },
+    {
+      "UserName": "Jackie",
+      "Gender": "female",
+      "KnownAs": "Turner",
+      "DateOfBirth": "1986-07-25",
+      "Class": "Best",
+      "Created": "2022-06-28",
+      "LastActive": "2022-05-21",
+      "Photos": [
+        {
+          "Url": "https://randomuser.me/api/portrays/women/18.jpg",
+          "IsMain": true
+        }
+      ]
+    },
+    {
+      "UserName": "Ginger",
+      "Gender": "female",
+      "KnownAs": "Riddle",
+      "DateOfBirth": "1985-10-25",
+      "Class": "Brock",
+      "Created": "2022-05-27",
+      "LastActive": "2022-06-06",
+      "Photos": [
+        {
+          "Url": "https://randomuser.me/api/portrays/women/40.jpg",
+          "IsMain": true
+        }
+      ]
+    },
+    {
+        "UserName": "Duffy",
+        "Gender": "female",
+        "KnownAs": "Serrano",
+        "DateOfBirth": "1987-06-08",
+        "Class": "Hoffman",
+        "Created": "2022-05-13",
+        "LastActive": "2022-05-24",
+        "Photos": [
+          {
+            "Url": "https://randomuser.me/api/portrays/women/13.jpg",
+            "IsMain": true
+          }
+        ]
+      },
+      {
+        "UserName": "Koch",
+        "Gender": "female",
+        "KnownAs": "Blackwell",
+        "DateOfBirth": "1987-11-15",
+        "Class": "Collier",
+        "Created": "2022-05-04",
+        "LastActive": "2022-06-13",
+        "Photos": [
+          {
+            "Url": "https://randomuser.me/api/portrays/women/97.jpg",
+            "IsMain": true
+          }
+        ]
+      },
+      {
+        "UserName": "Gordon",
+        "Gender": "female",
+        "KnownAs": "Stuart",
+        "DateOfBirth": "1983-05-27",
+        "Class": "Mann",
+        "Created": "2022-06-17",
+        "LastActive": "2022-06-02",
+        "Photos": [
+          {
+            "Url": "https://randomuser.me/api/portrays/women/28.jpg",
+            "IsMain": true
+          }
+        ]
+      },
+      {
+        "UserName": "Atkins",
+        "Gender": "female",
+        "KnownAs": "Merritt",
+        "DateOfBirth": "1985-05-07",
+        "Class": "Cleveland",
+        "Created": "2022-05-20",
+        "LastActive": "2022-06-03",
+        "Photos": [
+          {
+            "Url": "https://randomuser.me/api/portrays/women/84.jpg",
+            "IsMain": true
+          }
+        ]
+      },
+      {
+        "UserName": "Lara",
+        "Gender": "female",
+        "KnownAs": "Case",
+        "DateOfBirth": "1987-09-16",
+        "Class": "Moss",
+        "Created": "2022-07-03",
+        "LastActive": "2022-06-06",
+        "Photos": [
+          {
+            "Url": "https://randomuser.me/api/portrays/women/1.jpg",
+            "IsMain": true
+          }
+        ]
+      }
+  ]
