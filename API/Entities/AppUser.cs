@@ -1,4 +1,3 @@
-using API.Extensions;
 using Microsoft.AspNetCore.Identity;
 
 namespace API.Entities
@@ -12,6 +11,8 @@ namespace API.Entities
         public string Gender { get; set; }
         public string Class { get; set; }
         public string Team { get; set; }
+        public string Phone { get; set; }
+        public string Introduction {get; set;}
         
         public ICollection<Photo> Photos { get; set; }
         public ICollection<AppUserRole> UserRoles { get; set; }

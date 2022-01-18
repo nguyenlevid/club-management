@@ -1,0 +1,64 @@
+<div class="row" *ngIf="member">
+    <div class="col-4">
+        <h1>Your profile</h1>
+    </div>
+    <div class="col-8">
+        <div class="alert alert-danger" *ngIf="editForm.dirty" style="width: 60%;">
+            <strong>Note:</strong> You have made changes... any unsaved changes will be lost!
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <img src="{{member.photoUrl || '../../../../../assets/user.png'}}" alt="{{member.knownAs}}" class="card-img-top img-thumbnail">
+            <div class="card-body">
+                <div>
+                    <p><strong>Name:</strong> {{member.knownAs}}</p>
+                </div>
+                <div>
+                    <p><strong>Team:</strong> {{member.team}}</p>
+                </div>
+                <div>
+                    <p><strong>Class:</strong> {{member.class}}</p>
+                </div>
+                <div>      
+                    <p><strong>Email:</strong> {{member.email}}</p>
+                </div>
+                <div>     
+                    <p><strong>Phone:</strong> {{member.phone}}</p>
+                </div>
+                <div>     
+                    <p><strong>Member since:</strong> {{member.created}}</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                    <button [disabled]="!editForm.dirty" form="editForm" type="submit" class="btn btn-primary btn-block">Save changes</button>
+        
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <tabset class="member-tabset">
+            <tab heading='About {{member.knownAs}}'>
+                <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
+                    <h4>Description</h4>
+                    <textarea class="form-control" [(ngModel)]="member.introduction" name="introduction" rows="4"></textarea>
+                    <h4>Personal Info</h4>
+                    <h6>Email: </h6>
+                    <textarea class="form-control mb-2" [(ngModel)]="member.email" name="email" cols="3" rows="3"></textarea>
+                    <h6>Phone: </h6>
+                    <textarea class="form-control mb-2" [(ngModel)]="member.phone" name="phone" cols="3" rows="3"></textarea>
+                    <h6>Class: </h6>
+                    <textarea class="form-control mb-2" [(ngModel)]="member.class" name="class" cols="3" rows="3"></textarea>
+                    
+                </form>          
+            </tab>
+            <tab heading='Tasks'>
+                <h4>Tasks</h4>
+            </tab>
+            <tab heading='Edit Photos'>
+                <p>Edit will go here</p>
+            </tab>
+        </tabset>
+    </div>
+</div>
