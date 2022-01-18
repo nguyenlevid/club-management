@@ -11,6 +11,7 @@ namespace API.Entities
         public DateTime LastActive { get; set; } = DateTime.Now;
         public string Gender { get; set; }
         public string Class { get; set; }
+        public string Team { get; set; }
         
         public ICollection<Photo> Photos { get; set; }
         public ICollection<AppUserRole> UserRoles { get; set; }
