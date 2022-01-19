@@ -19,16 +19,16 @@ export class EventDetailComponent implements OnInit {
   ngOnInit(): void {
     this.loadEvent()
 
-    this.galleryOptions = [
-      {
-        width: '700px',
-        height: '500px',
-        imagePercent: 100,
-        thumbnailsColumns: 4,
-        imageAnimation: NgxGalleryAnimation.Slide,
-        preview: false
-      }
-    ]
+    // this.galleryOptions = [
+    //   {
+    //     width: '700px',
+    //     height: '500px',
+    //     imagePercent: 100,
+    //     thumbnailsColumns: 4,
+    //     imageAnimation: NgxGalleryAnimation.Slide,
+    //     preview: false
+    //   }
+    // ]
   }
 
   getImages(): NgxGalleryImage[] {

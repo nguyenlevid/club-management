@@ -5,7 +5,7 @@
         [eventPhotos]="clubEvent.photos"
     ></app-carousel>
     </div>
-    <div class="container">
+    <div class="container" *ngIf="clubEvent">
         <h3>Info</h3>
         <h5>Description</h5>
         <p>Event name: {{clubEvent.title}}</p>
