@@ -1,0 +1,9 @@
+carousel img {
+    height: 500px;
+    width: 700px;
+}
+
+carousel {
+    transition-duration: 350ms;
+    transition-timing-function: ease-out;
+}

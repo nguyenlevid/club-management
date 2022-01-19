@@ -29,6 +29,8 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 import { EventListComponent } from './events/event-list/event-list.component';
 import { EventDetailComponent } from './events/event-detail/event-detail.component';
 import { EventCardComponent } from './events/event-card/event-card.component';
+import { EventphotoEditorComponent } from './events/eventphoto-editor/eventphoto-editor.component';
+import { CarouselComponent } from './_tools/carousel/carousel.component';
 
 registerLocaleData(en);
 
@@ -48,7 +50,9 @@ registerLocaleData(en);
     MemberEditComponent,
     EventListComponent,
     EventDetailComponent,
-    EventCardComponent
+    EventCardComponent,
+    EventphotoEditorComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

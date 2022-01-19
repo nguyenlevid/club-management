@@ -19,6 +19,7 @@ namespace API.Helpers
                 .ForMember(dest => dest.PhotoUrl, opt => opt.MapFrom(src => 
                             src.Photos.FirstOrDefault(x => x.IsMain).Url));
             CreateMap<EventPhoto, EventPhotoDto>();
+            CreateMap<EventUpdateDto, Event>();
         }
     }
 }

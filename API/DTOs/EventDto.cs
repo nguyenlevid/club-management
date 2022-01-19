@@ -4,6 +4,7 @@ namespace API.DTOs
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public string EventCode { get; set; }
         public string PhotoUrl { get; set; }
         public string Purpose { get; set; }
         public string TeamInCharge { get; set; }

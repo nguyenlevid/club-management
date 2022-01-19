@@ -9,6 +9,7 @@ namespace API.Interfaces
         Task<bool> SaveAllAsync();
         Task<IEnumerable<EventDto>> GetEventsAsync();
         Task<EventDto> GetEventByIdAsync(int id);
-        Task<Event> GetEventAsync(int id);
+        Task<Event> GetEventByEventCodeAsync(string code);
+        Task<EventDto> GetEventAsync(string code);
     }
 }

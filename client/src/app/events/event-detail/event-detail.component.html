@@ -1,1 +1,8 @@
-<p>event-detail works!</p>
+<div class="container" *ngIf="clubEvent">
+    <app-carousel
+    [clubEvent]="clubEvent"
+    [eventPhotos]="clubEvent.photos"
+></app-carousel>
+</div>
+
+

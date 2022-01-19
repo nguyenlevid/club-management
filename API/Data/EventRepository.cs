@@ -17,9 +17,19 @@ namespace API.Data
             _context = context;
         }
 
-        public async Task<Event> GetEventAsync(int id)
+        public async Task<EventDto> GetEventAsync(string code)
         {
-            return await _context.Events.FindAsync(id);
+            return await _context.Events 
+                            .Where(x => x.EventCode == code)
+                            .ProjectTo<EventDto>(_mapper.ConfigurationProvider)
+                            .SingleOrDefaultAsync();
+        }
+
+        public async Task<Event> GetEventByEventCodeAsync(string code)
+        {
+            return await _context.Events    
+                        .Where(x => x.EventCode == code)
+                        .SingleOrDefaultAsync();
         }
 
         public async Task<EventDto> GetEventByIdAsync(int id)

@@ -1,0 +1,9 @@
+<carousel>
+    <slide *ngFor="let eventPhoto of eventPhotos">
+      <img src="{{eventPhoto.url}}">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>{{clubEvent.title}}</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </slide>
+</carousel>

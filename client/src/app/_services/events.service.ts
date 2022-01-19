@@ -24,14 +24,14 @@ export class EventsService {
     )
   }
 
-  getEvent(id: number) {
-    const clubEvent = this.clubEvents.find(x => x.id === id);
+  getEvent(eventCode: string) {
+    const clubEvent = this.clubEvents.find(x => x.eventCode === eventCode);
     if (clubEvent !== undefined) return of(clubEvent);
-    return this.http.get<ClubEvent>(this.baseurl + 'events/' + id);
+    return this.http.get<ClubEvent>(this.baseurl + 'events/' + eventCode);
   }
 
-  updateEvent(clubEvent: ClubEvent, id: number) {
-    return this.http.put(this.baseurl + 'events/' + id, clubEvent).pipe(
+  updateEvent(clubEvent: ClubEvent, code: string) {
+    return this.http.put(this.baseurl + 'events/' + code, clubEvent).pipe(
       map(() => {
         const index = this.clubEvents.indexOf(clubEvent);
         this.clubEvents[index] = clubEvent;
