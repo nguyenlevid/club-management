@@ -32,7 +32,7 @@ namespace API.Controllers
         }
 
 
-        [HttpGet("{code}")]
+        [HttpGet("{code}", Name = "GetEvent")]
         public async Task<ActionResult<EventDto>> GetEvent(string code) 
         {
             return await _eventRepository.GetEventAsync(code);
@@ -52,34 +52,34 @@ namespace API.Controllers
             return BadRequest("Failed to update event");       
         }
 
-        // [HttpPost("add-photo")]
-        // public async Task<ActionResult<PhotoDto>> AddPhoto(IFormFile file, string code)
-        // {
-        //     var theEvent = await _eventRepository.GetEventByEventCodeAsync(code);
+        [HttpPost("add-photo/{code}")]
+        public async Task<ActionResult<EventPhotoDto>> AddPhoto(IFormFile file,[FromRoute] string code)
+        {
+            var theEvent = await _eventRepository.GetEventByEventCodeAsync(code);
 
-        //     var result = await _photoService.AddPhotoAsync(file);
+            var result = await _photoService.AddPhotoAsync(file);
 
-        //     if (result.Error != null) return BadRequest(result.Error.Message);
+            if (result.Error != null) return BadRequest(result.Error.Message);
 
-        //     var photo = new EventPhoto 
-        //     {
-        //         Url = result.SecureUrl.AbsoluteUri,
-        //         PublicId = result.PublicId
-        //     };
+            var photo = new EventPhoto 
+            {
+                Url = result.SecureUrl.AbsoluteUri,
+                PublicId = result.PublicId
+            };
 
-        //     if (user.Photos.Count == 0)
-        //     {
-        //         photo.IsMain = true;
-        //     }
+            if (theEvent.Photos.Count == 0)
+            {
+                photo.IsMain = true;
+            }
 
-        //     user.Photos.Add(photo);
+            theEvent.Photos.Add(photo);
 
-        //     if (await _userRepository.SaveAllAsync())
-        //     {
-        //         return CreatedAtRoute("GetUser", new {username = user.UserName}, _mapper.Map<PhotoDto>(photo));
-        //     }
+            if (await _eventRepository.SaveAllAsync())
+            {
+                return CreatedAtRoute("GetEvent", new {code = theEvent.EventCode}, _mapper.Map<EventPhotoDto>(photo));
+            }
 
-        //     return BadRequest("Problem adding photo");
-        // }
+            return BadRequest("Problem adding photo");
+        }
     }
 }

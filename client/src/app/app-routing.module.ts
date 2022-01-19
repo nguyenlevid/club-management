@@ -4,6 +4,7 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { EventDetailComponent } from './events/event-detail/event-detail.component';
+import { EventEditComponent } from './events/event-edit/event-edit.component';
 import { EventListComponent } from './events/event-list/event-list.component';
 import { HomeComponent } from './home/home.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
       {path: 'member/edit', component: MemberEditComponent, canDeactivate: [PreventUnsavedChangesGuard]},
       {path: 'events', component: EventListComponent},
       {path: 'events/:eventCode', component: EventDetailComponent},
+      {path: 'event/edit', component: EventEditComponent, canDeactivate: [PreventUnsavedChangesGuard]},
       {path: 'messages', component: MessagesComponent},
     ]
   },

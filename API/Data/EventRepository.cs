@@ -28,8 +28,8 @@ namespace API.Data
         public async Task<Event> GetEventByEventCodeAsync(string code)
         {
             return await _context.Events    
-                        .Where(x => x.EventCode == code)
-                        .SingleOrDefaultAsync();
+                        .Include(x => x.Photos)
+                        .SingleOrDefaultAsync(x => x.EventCode == code);
         }
 
         public async Task<EventDto> GetEventByIdAsync(int id)
