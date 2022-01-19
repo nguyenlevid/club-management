@@ -32,6 +32,7 @@ import { EventCardComponent } from './events/event-card/event-card.component';
 import { EventphotoEditorComponent } from './events/eventphoto-editor/eventphoto-editor.component';
 import { CarouselComponent } from './_tools/carousel/carousel.component';
 import { EventEditComponent } from './events/event-edit/event-edit.component';
+import { FancyCarouselComponent } from './_tools/fancy-carousel/fancy-carousel.component';
 
 registerLocaleData(en);
 
@@ -54,7 +55,8 @@ registerLocaleData(en);
     EventCardComponent,
     EventphotoEditorComponent,
     CarouselComponent,
-    EventEditComponent
+    EventEditComponent,
+    FancyCarouselComponent
   ],
   imports: [
     BrowserModule,

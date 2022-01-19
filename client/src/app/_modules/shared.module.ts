@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ToastrModule } from 'ngx-toastr';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import {TabsModule} from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
-import { CarouselModule } from 'ngx-bootstrap/carousel'
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 
@@ -21,6 +22,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel'
     TabsModule.forRoot(),
     NgxGalleryModule,
     CarouselModule.forRoot(),
+    NzCarouselModule,
   ],
   exports: [
     BsDropdownModule,
@@ -28,7 +30,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel'
     NzButtonModule,
     TabsModule,
     NgxGalleryModule,
-    CarouselModule
+    CarouselModule,
+    NzCarouselModule,
   ],
 })
 export class SharedModule { }
