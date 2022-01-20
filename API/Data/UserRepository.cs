@@ -31,8 +31,6 @@ namespace API.Data
         {
             var query = _context.Users.AsQueryable();
             
-            query = query.Where(u => u.UserName != userParams.CurrentUsername);
-            
             if (userParams.Team != null && userParams.Team != "all") {
                 query = query.Where(u => u.Team == userParams.Team);
             }
