@@ -44,7 +44,7 @@ export class EventDetailComponent implements OnInit {
   }
 
   loadEvent() {
-    this.eventService.getEvent(this.route.snapshot.paramMap.get("eventCode")).subscribe(clubEvent => {   
+    this.eventService.getEvent(this.route.snapshot.paramMap.get("eventCode")).subscribe(clubEvent => {
       this.clubEvent = clubEvent;
       this.galleryImages = this.getImages();
     })
