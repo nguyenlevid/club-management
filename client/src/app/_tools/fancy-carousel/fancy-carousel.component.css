@@ -1,16 +1,25 @@
+.container {
+  margin-top: -45px;
+  
+}
 
-      [nz-carousel-content] {
-        text-align: center;
-        height: 160px;
-        line-height: 160px;
-        background: #364d79;
-        color: #fff;
-        overflow: hidden;
-      }
+[nz-carousel-content] {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  color: #fff;
+  overflow: hidden;
+}
 
-      h3 {
-        color: #fff;
-        margin-bottom: 0;
-        user-select: none;
-      }
-    
+[nz-carousel-content] img {
+  flex-shrink: 1;
+  min-width: 100%;
+  min-height: 100%
+}
+
+h3 {
+  color: #fff;
+  margin-bottom: 0;
+  user-select: none;
+}

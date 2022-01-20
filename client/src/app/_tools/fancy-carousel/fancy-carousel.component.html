@@ -1,5 +1,9 @@
 <nz-carousel nzAutoPlay>
-  <div nz-carousel-content *ngFor="let index of array">
-    <h3>{{ index }}</h3>
+  <div nz-carousel-content *ngFor="let eventPhoto of eventPhotos">
+    <img src="{{eventPhoto.url}}">
+    <div>
+      <h3>{{clubEvent.title}}</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
   </div>
 </nz-carousel>
