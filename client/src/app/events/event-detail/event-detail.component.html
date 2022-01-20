@@ -4,7 +4,10 @@
         [clubEvent]="clubEvent"
         [eventPhotos]="clubEvent.photos"
     ></app-carousel> -->
-          <nz-carousel></nz-carousel>
+          <app-fancy-carousel
+            [clubEvent]="clubEvent"
+            [eventPhotos]="clubEvent.photos"  
+          ></app-fancy-carousel>
     </div>
     <div class="container" *ngIf="clubEvent">
         <h3>Info</h3>
