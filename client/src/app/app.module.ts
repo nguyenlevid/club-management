@@ -34,6 +34,8 @@ import { CarouselComponent } from './_tools/carousel/carousel.component';
 import { EventEditComponent } from './events/event-edit/event-edit.component';
 import { FancyCarouselComponent } from './_tools/fancy-carousel/fancy-carousel.component';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { TextInputComponent } from './_forms/text-input/text-input.component';
+import { DateInputComponent } from './_forms/date-input/date-input.component';
 
 registerLocaleData(en);
 
@@ -58,7 +60,9 @@ registerLocaleData(en);
     CarouselComponent,
     EventEditComponent,
     FancyCarouselComponent,
-    PhotoEditorComponent
+    PhotoEditorComponent,
+    TextInputComponent,
+    DateInputComponent
   ],
   imports: [
     BrowserModule,

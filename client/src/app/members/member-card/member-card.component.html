@@ -14,6 +14,6 @@
         <h6 class="card-title text-center mb-1"><i class="fa fa-user mr-2"></i>
             {{member.knownAs || member.username}}
         </h6>
-        <p class="card-text text-muted text-center">{{member.team}}</p>
+        <p class="card-text text-muted text-center">{{member.team | titlecase}}</p>
     </div>
 </div>
