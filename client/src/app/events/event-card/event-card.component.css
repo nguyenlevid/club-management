@@ -9,11 +9,18 @@
     transition-duration: 350ms;
     transition-timing-function: ease-out;
     box-shadow: 0 0 50px #ccc;
+    height: 300px;
 }
 
 .card-img-wrapper {
     overflow: hidden;
     position: relative;
+    height: 250px;
+}
+
+.card-img-top {
+  width: 500px;
+  height: 250px;
 }
 
 .member-icons {

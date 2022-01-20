@@ -1,6 +1,18 @@
 .navbar-custom {
   background-color: rgb(255, 183, 0);
 }
+.navbar-brand {
+  color: white;
+}
+
+a.nav-link {
+  color: black;
+}
+
+a.nav-link:hover {
+  background-color: white;
+  border-radius: 10px;
+}
 
 .dropdown-toggle, .dropdown-item {
     cursor: pointer;

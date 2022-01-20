@@ -1,7 +1,12 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+</style>
+
+
 <div>
   <div class="container" *ngIf="clubEvent">
 
-    <h1>Event name: {{clubEvent.title}}</h1>
+    <h2>{{clubEvent.title}}</h2>
 
     <app-fancy-carousel [clubEvent]="clubEvent" [eventPhotos]="clubEvent.photos"></app-fancy-carousel>
 
