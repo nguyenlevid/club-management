@@ -7,7 +7,7 @@
         <ul *ngIf="messages?.length > 0" class="chat">
             <li *ngFor="let message of messages">
                 <div>
-                    <span class="chat-img float-right">
+                    <span class="chat-img float-end">
                         <img 
                             class="rounded-circle"
                             src="{{message.senderPhotoUrl || '../../../../../assets/user.png'}}" 

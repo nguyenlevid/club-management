@@ -31,6 +31,12 @@ namespace API.Interfaces
                         ValidateAudience = false,
                     };
             });
+
+            services.AddAuthorization(opt => {
+                opt.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
+                opt.AddPolicy("ModeratePhotoRole", policy => policy.RequireRole("Admin", "Leader"));
+            });
+            
             return services;
         }
     }
