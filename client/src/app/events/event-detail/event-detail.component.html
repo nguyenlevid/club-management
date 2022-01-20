@@ -11,17 +11,18 @@
     <app-fancy-carousel [clubEvent]="clubEvent" [eventPhotos]="clubEvent.photos"></app-fancy-carousel>
 
     <div class="header">
-      <h5>Description</h5>
-      <p>Event code: {{clubEvent.eventCode}}</p>
-      <div>Purpose: {{clubEvent.purpose}}</div>
+      <h5 class='title'>Description</h5>
+      <p>Event code:   <span>{{clubEvent.eventCode}}</span></p>
+      <div class='details'>Purpose:    <span>{{clubEvent.purpose}}</span></div>
     </div>
 
     <div class="header">
-      <h5>Details</h5>
-      <p>Team in charge: {{clubEvent.teamInCharge}}</p>
-      <p>Posting Date: {{clubEvent.postingDate}}</p>
-      <p>Draft Deadline: {{clubEvent.draftDeadline}}</p>
-      <div>Specifications: {{clubEvent.specifications}}</div>
+      <h5 class='title'>Details</h5>
+      <p>Team in charge:   <span>{{clubEvent.teamInCharge}}</span></p>
+      <p>Posting Date:     <span>{{clubEvent.postingDate}}</span></p>
+      <p>Draft Deadline:   <span>{{clubEvent.draftDeadline}}</span></p>
+      <div>Specifications: <span>{{clubEvent.specifications}}</span></div>
     </div>
+
   </div>
 </div>
