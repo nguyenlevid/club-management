@@ -45,8 +45,9 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 </style>
-
-<h2>MEMBERS</h2>
+<div>
+  <img src="/assets/header-name/members.png" style='padding-bottom: 30px;'>
+</div>
 <div class="row">
     <div *ngFor="let member of members" class="col-3">
        <app-member-card [member]="member"></app-member-card>

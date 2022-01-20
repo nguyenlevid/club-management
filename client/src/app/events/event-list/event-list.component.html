@@ -2,7 +2,10 @@
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 </style>
 
-<h2>EVENTS</h2>
+<div>
+  <img src="/assets/header-name/events.png" style='padding-bottom: 30px;'>
+</div>
+
 <div class="row">
     <div *ngFor="let clubEvent of clubEvents$ | async" class="col-3">
        <app-event-card [clubEvent]="clubEvent"></app-event-card>
