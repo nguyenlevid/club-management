@@ -48,7 +48,8 @@ export class RegisterComponent implements OnInit {
   // }
   register() {
     this.accountService.register(this.registerForm.value).subscribe(response => {
-      this.cancel();
+      this.router.navigateByUrl('/');
+      this.toastr.success("Member created successfully");
     }, error => {
       this.validationErrors = error;
     })

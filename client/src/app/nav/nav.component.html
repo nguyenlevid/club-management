@@ -16,6 +16,9 @@
               <li *appHasRole="['Admin', 'Leader']" class="nav-item">
                 <a class="nav-link" routerLink='/admin' routerLinkActive="active">Admin</a>
               </li>
+              <li *appHasRole="['Admin', 'Leader']" class="nav-item">
+                <a class="nav-link" routerLink='/create-member' routerLinkActive="active">Create Member</a>
+              </li>
             </ng-container>
             <li class="nav-item">
               <a class="nav-link" routerLink='/errors' routerLinkActive="active">Errors</a>

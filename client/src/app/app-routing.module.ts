@@ -12,6 +12,7 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MessagesComponent } from './messages/messages.component';
+import { RegisterComponent } from './register/register.component';
 import { AdminGuard } from './_guards/admin.guard';
 import { AuthGuard } from './_guards/auth.guard';
 import { PreventUnsavedChangesGuard } from './_guards/prevent-unsaved-changes.guard';
@@ -32,6 +33,7 @@ const routes: Routes = [
       {path: 'event/edit', component: EventEditComponent, canDeactivate: [PreventUnsavedChangesGuard]},
       {path: 'messages', component: MessagesComponent},
       {path: 'admin', component: AdminPanelComponent, canActivate: [AdminGuard]},
+      {path: 'create-member', component: RegisterComponent, canActivate: [AdminGuard]},
     ]
   },
   {path: 'errors', component: TestErrorsComponent},
