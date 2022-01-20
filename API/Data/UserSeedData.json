@@ -1,160 +1,224 @@
 [
     {
-      "UserName": "Cheri",
+      "UserName": "Nhi",
       "Gender": "female",
-      "KnownAs": "Rosales",
+      "KnownAs": "Nhi",
       "DateOfBirth": "1986-02-05",
-      "Class": "Fuller",
+      "Class": "20DS",
       "Created": "2022-06-27",
       "LastActive": "2022-05-16",
-      "Team": "Tech",
+      "Team": "tech",
       "Photos": [
         {
-          "Url": "https://randomuser.me/api/portraits/women/41.jpg",
+          "Url": "/assets/ava/1.png",
           "IsMain": true
         }
       ]
     },
     {
-      "UserName": "Elsa",
-      "Gender": "female",
-      "KnownAs": "Farmer",
+      "UserName": "Hieu",
+      "Gender": "male",
+      "KnownAs": "Hieu",
       "DateOfBirth": "1984-02-12",
-      "Class": "Shaffer",
+      "Class": "20DS",
       "Created": "2022-06-01",
-      "Team": "Tech",
+      "Team": "tech",
       "LastActive": "2022-07-06",
       "Photos": [
         {
-          "Url": "https://randomuser.me/api/portraits/women/80.jpg",
+          "Url": "/assets/ava/2.png",
           "IsMain": true
         }
       ]
     },
     {
-      "UserName": "Adele",
+      "UserName": "Viet",
       "Gender": "female",
-      "KnownAs": "Johns",
+      "KnownAs": "Viet",
       "DateOfBirth": "1988-05-21",
-      "Class": "Mooney",
+      "Class": "20CSE",
       "Created": "2022-06-23",
-      "Team": "Media",
+      "Team": "media",
       "LastActive": "2022-05-05",
       "Photos": [
         {
-          "Url": "https://randomuser.me/api/portraits/women/22.jpg",
+          "Url": "/assets/ava/3.png",
           "IsMain": true
         }
       ]
     },
     {
-      "UserName": "Jackie",
+      "UserName": "Minh",
       "Gender": "female",
-      "KnownAs": "Turner",
+      "KnownAs": "Minh",
       "DateOfBirth": "1986-07-25",
-      "Class": "Best",
+      "Class": "20CSE",
       "Created": "2022-06-28",
-      "Team": "HR",
+      "Team": "hr",
       "LastActive": "2022-05-21",
       "Photos": [
         {
-          "Url": "https://randomuser.me/api/portraits/women/18.jpg",
+          "Url": "/assets/ava/4.png",
           "IsMain": true
         }
       ]
     },
     {
-      "UserName": "Ginger",
+      "UserName": "Vy",
       "Gender": "female",
-      "KnownAs": "Riddle",
+      "KnownAs": "Vy",
       "DateOfBirth": "1985-10-25",
-      "Class": "Brock",
+      "Class": "20CSE",
       "Created": "2022-05-27",
-      "Team": "HR",
+      "Team": "hr",
       "LastActive": "2022-06-06",
       "Photos": [
         {
-          "Url": "https://randomuser.me/api/portraits/women/40.jpg",
+          "Url": "/assets/ava/5.png",
           "IsMain": true
         }
       ]
     },
     {
-        "UserName": "Duffy",
+        "UserName": "Nghi",
         "Gender": "female",
-        "KnownAs": "Serrano",
+        "KnownAs": "Nghi",
         "DateOfBirth": "1987-06-08",
-        "Class": "Hoffman",
-        "Team": "Tech",
+        "Class": "19CSE",
+        "Team": "tech",
         "Created": "2022-05-13",
         "LastActive": "2022-05-24",
         "Photos": [
           {
-            "Url": "https://randomuser.me/api/portraits/women/13.jpg",
+            "Url": "/assets/ava/6.png",
             "IsMain": true
           }
         ]
       },
       {
-        "UserName": "Koch",
-        "Gender": "female",
-        "KnownAs": "Blackwell",
+        "UserName": "Hoc",
+        "Gender": "male",
+        "KnownAs": "Hoc",
         "DateOfBirth": "1987-11-15",
-        "Class": "Collier",
-        "Team": "HR",
+        "Class": "19CSE",
+        "Team": "hr",
         "Created": "2022-05-04",
         "LastActive": "2022-06-13",
         "Photos": [
           {
-            "Url": "https://randomuser.me/api/portraits/women/97.jpg",
+            "Url": "/assets/ava/7.png",
             "IsMain": true
           }
         ]
       },
       {
-        "UserName": "Gordon",
-        "Gender": "female",
-        "KnownAs": "Stuart",
+        "UserName": "Hao",
+        "Gender": "male",
+        "KnownAs": "Hao",
         "DateOfBirth": "1983-05-27",
-        "Class": "Mann",
-        "Team": "Media",
+        "Class": "19DS",
+        "Team": "media",
         "Created": "2022-06-17",
         "LastActive": "2022-06-02",
         "Photos": [
           {
-            "Url": "https://randomuser.me/api/portraits/women/28.jpg",
+            "Url": "/assets/ava/8.png",
             "IsMain": true
           }
         ]
       },
       {
-        "UserName": "Atkins",
-        "Gender": "female",
-        "KnownAs": "Merritt",
+        "UserName": "Hung",
+        "Gender": "male",
+        "KnownAs": "Hung",
         "DateOfBirth": "1985-05-07",
-        "Class": "Cleveland",
+        "Class": "20IBM",
         "Created": "2022-05-20",
-        "Team": "Media",
+        "Team": "tech",
         "LastActive": "2022-06-03",
         "Photos": [
           {
-            "Url": "https://randomuser.me/api/portraits/women/84.jpg",
+            "Url": "/assets/ava/9.png",
             "IsMain": true
           }
         ]
       },
       {
-        "UserName": "Lara",
-        "Gender": "female",
-        "KnownAs": "Case",
+        "UserName": "Thuc",
+        "Gender": "male",
+        "KnownAs": "Thuc",
         "DateOfBirth": "1987-09-16",
-        "Class": "Moss",
-        "Team": "Media",
+        "Class": "20IBM",
+        "Team": "media",
         "Created": "2022-07-03",
         "LastActive": "2022-06-06",
         "Photos": [
           {
-            "Url": "https://randomuser.me/api/portraits/women/1.jpg",
+            "Url": "/assets/ava/10.png",
+            "IsMain": true
+          }
+        ]
+      },
+      {
+        "UserName": "Hien",
+        "Gender": "male",
+        "KnownAs": "Hien",
+        "DateOfBirth": "1987-09-16",
+        "Class": "20IBM",
+        "Team": "hr",
+        "Created": "2022-07-03",
+        "LastActive": "2022-06-06",
+        "Photos": [
+          {
+            "Url": "/assets/ava/11.png",
+            "IsMain": true
+          }
+        ]
+      },
+      {
+        "UserName": "My",
+        "Gender": "female",
+        "KnownAs": "My",
+        "DateOfBirth": "1987-09-16",
+        "Class": "20IBM",
+        "Team": "tech",
+        "Created": "2022-07-03",
+        "LastActive": "2022-06-06",
+        "Photos": [
+          {
+            "Url": "/assets/ava/12.png",
+            "IsMain": true
+          }
+        ]
+      },
+      {
+        "UserName": "Linh",
+        "Gender": "male",
+        "KnownAs": "Linh",
+        "DateOfBirth": "1987-09-16",
+        "Class": "19IBM",
+        "Team": "media",
+        "Created": "2022-07-03",
+        "LastActive": "2022-06-06",
+        "Photos": [
+          {
+            "Url": "/assets/ava/13.png",
+            "IsMain": true
+          }
+        ]
+      },
+      {
+        "UserName": "phu",
+        "Gender": "male",
+        "KnownAs": "phu",
+        "DateOfBirth": "1987-09-16",
+        "Class": "20IBM",
+        "Team": "tech",
+        "Created": "2022-07-03",
+        "LastActive": "2022-06-06",
+        "Photos": [
+          {
+            "Url": "/assets/ava/14.png",
             "IsMain": true
           }
         ]

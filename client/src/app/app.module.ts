@@ -36,6 +36,7 @@ import { FancyCarouselComponent } from './_tools/fancy-carousel/fancy-carousel.c
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DateInputComponent } from './_forms/date-input/date-input.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 registerLocaleData(en);
 
@@ -62,7 +63,8 @@ registerLocaleData(en);
     FancyCarouselComponent,
     PhotoEditorComponent,
     TextInputComponent,
-    DateInputComponent
+    DateInputComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

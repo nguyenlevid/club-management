@@ -1,5 +1,5 @@
 <div class="container mt-5">
-    <div *ngIf="!registerMode" style='text-align: center;'>
+    <!-- <div *ngIf="!registerMode" style='text-align: center;'>
         <h1>Club Member Register</h1>
         <p>Come to see what your club has... all you need to do is sign up!</p>
         <div class="text-center">
@@ -14,5 +14,13 @@
                 <app-register (cancelRegister)="cancelRegisterMode()"></app-register>
             </div>
         </div>
+    </div> -->
+    <h3>Welcome to our</h3>
+    <h2>ABC CLUB</h2>
+
+    <div>
+      <h4>HOTTEST EVENTS</h4>
+      <app-fancy-carousel [eventPhotos]="eventPhotos"></app-fancy-carousel>
     </div>
-</div>
+
+  </div>

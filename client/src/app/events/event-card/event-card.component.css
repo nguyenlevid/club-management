@@ -19,8 +19,9 @@
 }
 
 .card-img-top {
-  width: 500px;
-  height: 250px;
+  width: 320px;
+  height: 320px;
+  flex-shrink: 0;
 }
 
 .member-icons {
