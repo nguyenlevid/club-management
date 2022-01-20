@@ -1,23 +1,20 @@
 .container {
   margin-top: -45px;
-
 }
-
 
 [nz-carousel-content] {
   text-align: center;
-  height: 460px;
-  width: 800px;
-  line-height: 160px;
+  height: 70px;
+  width: 100%;
   background: #364d79;
   color: #fff;
   overflow: hidden;
 }
 
 [nz-carousel-content] img {
-  flex-shrink: 1;
+  flex-shrink: 0;
   min-width: 100%;
-  min-height: 100%
+  min-height: 100%;
 }
 
 h3 {

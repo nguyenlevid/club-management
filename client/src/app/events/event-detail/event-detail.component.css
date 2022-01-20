@@ -1,0 +1,26 @@
+        /* <h3>Info</h3>
+        <h5>Description</h5>
+        <p>Event name: {{clubEvent.title}}</p>
+        <p>Event code: {{clubEvent.eventCode}}</p>
+        <div>Purpose: {{clubEvent.purpose}}</div>
+        <h5>Details</h5>
+        <p>Team in charge: {{clubEvent.teamInCharge}}</p>
+        <p>Posting Date: {{clubEvent.postingDate}}</p>
+        <p>Draft Deadline: {{clubEvent.draftDeadline}}</p>
+        <div>Specifications: {{clubEvent.specifications}}</div>
+    </div> */
+
+div.container {
+  margin-top: 30px;
+
+}
+
+div.header {
+  margin: 30px;
+  background-color: rgb(156, 41, 12);
+  border-radius: 20px;
+}
+
+h3 {
+  text-align: center;
+}
