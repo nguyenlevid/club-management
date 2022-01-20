@@ -1,11 +1,13 @@
 .container {
   margin-top: -45px;
-  
+
 }
+
 
 [nz-carousel-content] {
   text-align: center;
-  height: 160px;
+  height: 460px;
+  width: 800px;
   line-height: 160px;
   background: #364d79;
   color: #fff;

@@ -7,6 +7,7 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import {TabsModule} from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 
@@ -23,6 +24,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     NgxGalleryModule,
     CarouselModule.forRoot(),
     NzCarouselModule,
+    FileUploadModule,
   ],
   exports: [
     BsDropdownModule,
@@ -32,6 +34,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     NgxGalleryModule,
     CarouselModule,
     NzCarouselModule,
+    FileUploadModule,
   ],
 })
 export class SharedModule { }

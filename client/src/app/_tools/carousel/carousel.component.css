@@ -16,6 +16,8 @@
 }
 
 carousel img {
+    height: 700px;
+    width: 1100px;
   flex-shrink: 0;
   min-width: 100%;
   min-height: 100%
