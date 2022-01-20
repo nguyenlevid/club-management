@@ -4,6 +4,7 @@ using API.DTOs;
 using Microsoft.EntityFrameworkCore;
 using API.Interfaces;
 using Microsoft.AspNetCore.Identity;
+using AutoMapper;
 
 namespace API.Controllers
 {
@@ -11,13 +12,16 @@ namespace API.Controllers
     {
         private readonly SignInManager<AppUser> _signInManager;
         private readonly ITokenService _tokenService;
+        private readonly IMapper _mapper;
+
         public UserManager<AppUser> _userManager { get; }
         public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, 
-            ITokenService tokenService)
+            ITokenService tokenService, IMapper mapper)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenService = tokenService;
+            _mapper = mapper;
         }
 
         [HttpPost("register")]
@@ -27,12 +31,11 @@ namespace API.Controllers
             {
                 return BadRequest("Username is taken");
             }
-            
-            var user = new AppUser
-            {
-                UserName = registerDto.Username.ToLower(),
-            };
 
+            var user = _mapper.Map<AppUser>(registerDto);
+            
+            user.UserName = registerDto.Username.ToLower();
+           
             var result = await _userManager.CreateAsync(user, registerDto.Password);
 
             if (!result.Succeeded) return BadRequest(result.Errors);
@@ -40,7 +43,8 @@ namespace API.Controllers
             return new UserDto
             {
                 Username = user.UserName,
-                Token = _tokenService.CreateToken(user)
+                Token = _tokenService.CreateToken(user),
+                KnownAs = user.KnownAs
             };
         }
 
@@ -63,6 +67,7 @@ namespace API.Controllers
                 Username = user.UserName,
                 Token = _tokenService.CreateToken(user),
                 PhotoUrl = user.Photos.FirstOrDefault(x => x.IsMain)?.Url,
+                KnownAs = user.KnownAs
             };
         }
 

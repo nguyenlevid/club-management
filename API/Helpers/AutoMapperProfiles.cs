@@ -20,6 +20,7 @@ namespace API.Helpers
                             src.Photos.FirstOrDefault(x => x.IsMain).Url));
             CreateMap<EventPhoto, EventPhotoDto>();
             CreateMap<EventUpdateDto, Event>();
+            CreateMap<RegisterDto, AppUser>();
         }
     }
 }
