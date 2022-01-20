@@ -6,9 +6,9 @@
 </div>
 
 <div class="container mt-3">
-    <form #form="ngForm" class="form-inline mb-3" (ngSubmit)="loadMembers()" autocomplete="off">
-        <div class="form-group px-2">
-            <label>Team: </label>
+    <form #form="ngForm" class="d-flex mb-3" (ngSubmit)="loadMembers()" autocomplete="off">
+        <div class="d-flex mx-2">
+            <label class="col-form-label me-2">Team: </label>
             <select name="team" [(ngModel)]="userParams.team" style="width: 130px;" class="form-control ml-1">
                 <option *ngFor="let team of teamList" [value]="team.value">
                     {{team.display}}
@@ -16,10 +16,10 @@
             </select>
         </div>
 
-        <button class="btn btn-primary ml-1" type="submit">Apply filters</button>
+        <button class="btn btn-primary ms-1" type="submit">Apply filters</button>
         <button (click)="resetFilters()" class="btn btn-primary ml-1" type="submit">Reset filters</button>
         <div class="col">
-            <div class="btn-group float-right">
+            <div class="btn-group float-end">
                 <button
                     type="button"
                     class="btn btn-info"

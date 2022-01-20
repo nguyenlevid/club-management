@@ -17,5 +17,7 @@ namespace API.Entities
         public ICollection<Photo> Photos { get; set; }
         public ICollection<AppUserRole> UserRoles { get; set; }
 
+        public ICollection<Message> MessagesSent { get; set; }
+        public ICollection<Message> MessagesReceived { get; set; }
     }
 }
