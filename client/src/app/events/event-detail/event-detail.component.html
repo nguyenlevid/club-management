@@ -1,24 +1,22 @@
-<div class="container">
-    <div class="container" *ngIf="clubEvent">
-        <!-- <app-carousel
-        [clubEvent]="clubEvent"
-        [eventPhotos]="clubEvent.photos"
-    ></app-carousel> -->
-          <app-fancy-carousel
-            [clubEvent]="clubEvent"
-            [eventPhotos]="clubEvent.photos"  
-          ></app-fancy-carousel>
+<div>
+  <div class="container" *ngIf="clubEvent">
+
+    <h1>Event name: {{clubEvent.title}}</h1>
+
+    <app-fancy-carousel [clubEvent]="clubEvent" [eventPhotos]="clubEvent.photos"></app-fancy-carousel>
+
+    <div class="header">
+      <h5>Description</h5>
+      <p>Event code: {{clubEvent.eventCode}}</p>
+      <div>Purpose: {{clubEvent.purpose}}</div>
     </div>
-    <div class="container" *ngIf="clubEvent">
-        <h3>Info</h3>
-        <h5>Description</h5>
-        <p>Event name: {{clubEvent.title}}</p>
-        <p>Event code: {{clubEvent.eventCode}}</p>
-        <div>Purpose: {{clubEvent.purpose}}</div>
-        <h5>Details</h5>
-        <p>Team in charge: {{clubEvent.teamInCharge}}</p>
-        <p>Posting Date: {{clubEvent.postingDate}}</p>
-        <p>Draft Deadline: {{clubEvent.draftDeadline}}</p>
-        <div>Specifications: {{clubEvent.specifications}}</div>
+
+    <div class="header">
+      <h5>Details</h5>
+      <p>Team in charge: {{clubEvent.teamInCharge}}</p>
+      <p>Posting Date: {{clubEvent.postingDate}}</p>
+      <p>Draft Deadline: {{clubEvent.draftDeadline}}</p>
+      <div>Specifications: {{clubEvent.specifications}}</div>
     </div>
+  </div>
 </div>

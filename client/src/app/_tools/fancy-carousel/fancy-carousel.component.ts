@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CarouselConfig } from 'ngx-bootstrap/carousel';
+
+
 import { ClubEvent } from 'src/app/_models/event';
 import { EventPhoto } from 'src/app/_models/eventPhoto';
 
@@ -15,6 +18,7 @@ export class FancyCarouselComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 }
 
 

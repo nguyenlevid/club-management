@@ -9,8 +9,6 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FileUploadModule } from 'ng2-file-upload';
 
-
-
 @NgModule({
   declarations: [],
   imports: [
