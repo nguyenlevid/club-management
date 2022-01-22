@@ -20,7 +20,7 @@
                 <a class="nav-link" routerLink='/create-member' routerLinkActive="active">Create Member</a>
               </li>
             </ng-container>
-            <li class="nav-item">
+            <li *appHasRole="['Admin']" class="nav-item">
               <a class="nav-link" routerLink='/errors' routerLinkActive="active">Errors</a>
             </li>
           </ul>

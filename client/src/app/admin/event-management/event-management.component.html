@@ -1,0 +1,52 @@
+<div class="container mt-3 ml-3">
+    <h5>Insert event code: </h5>
+    <form #eventForm="ngForm"  class="d-flex mt-2 mt-md-0" (ngSubmit)="loadEvent()" autocomplete="off">
+    <input
+        name="eventCode"
+        class="form-control me-sm-2"
+        style="width: 300px;"
+        [(ngModel)]="eventCode"
+        type="text"
+        placeholder="Event code">
+    <button class="btn btn-success" type="submit">Load event</button>
+    </form>
+</div>
+
+<div class="container" style="margin: 10px;" *ngIf="clubEvent">
+    <div class="col-8">
+        <div class="alert alert-danger" *ngIf="editForm.dirty" style="width: 60%;">
+            <strong>Note:</strong> You have made changes... any unsaved changes will be lost!
+        </div>
+    </div>
+    <div class="row-3">
+        <h4>Info:</h4>
+        <form [formGroup]="editForm" (ngSubmit)="updateEvent()" autocomplete="off">
+            <h5>Description</h5>
+            <hr><hr>
+            <strong class="mb-2">Title: </strong>
+            <app-text-input [formControl]='editForm.controls["title"]'></app-text-input>
+            <strong class="mb-2">Purpose: </strong>
+            <app-text-input [formControl]='editForm.controls["purpose"]'></app-text-input>
+            <h5>Details</h5>
+            <hr><hr>
+            <strong class="mb-2">Team In Charge: </strong>
+            <app-text-input [formControl]='editForm.controls["teamInCharge"]'></app-text-input>
+            <p><strong class="mb-2">Posting Date:</strong> {{clubEvent.postingDate | date}}</p>
+            <app-date-input [formControl]='editForm.controls["postingDate"]'></app-date-input>
+            <p><strong class="mb-2">Draft Deadline:</strong> {{clubEvent.draftDeadline | date}}</p>
+            <app-date-input [formControl]='editForm.controls["draftDeadline"]'></app-date-input>
+            <strong class="mb-2">Specifications: </strong>
+            <br><br>
+            <textarea style="border-radius: 10px;" cols="167" rows="5" [formControl]='editForm.controls["specifications"]'></textarea>
+            <br><br>
+            <div class="btn-group text-center">
+                <button type="submit" class="btn btn-primary btn-block">Save changes</button>
+            </div>
+        </form>    
+
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+    </div>
+</div>

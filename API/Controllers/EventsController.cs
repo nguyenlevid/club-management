@@ -38,8 +38,8 @@ namespace API.Controllers
             return await _eventRepository.GetEventAsync(code);
         }
 
-        [HttpPut("{code}")]
-        public async Task<ActionResult> UpdateEvent(EventUpdateDto eventUpdateDto, string code)
+        [HttpPut]
+        public async Task<ActionResult> UpdateEvent(EventUpdateDto eventUpdateDto,[FromQuery] string code)
         {
             var theEvent = await _eventRepository.GetEventByEventCodeAsync(code);
 

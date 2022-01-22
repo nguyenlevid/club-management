@@ -31,7 +31,7 @@ export class EventsService {
   }
 
   updateEvent(clubEvent: ClubEvent, code: string) {
-    return this.http.put(this.baseurl + 'events/' + code, clubEvent).pipe(
+    return this.http.put(this.baseurl + 'events?code=' + code, clubEvent).pipe(
       map(() => {
         const index = this.clubEvents.indexOf(clubEvent);
         this.clubEvents[index] = clubEvent;

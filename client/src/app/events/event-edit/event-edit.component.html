@@ -8,17 +8,19 @@
         <h4>Info:</h4>
         <form #editForm="ngForm" id="editForm" (ngSubmit)="updateEvent()">
             <h5>Description</h5>
-            <textarea class="form-control" [(ngModel)]="clubEvent.title" name="title" rows="4"></textarea>
-            <textarea class="form-control mb-2" [(ngModel)]="clubEvent.eventCode" name="eventCode" cols="3" rows="3"></textarea>
-            <textarea class="form-control mb-2" [(ngModel)]="clubEvent.purpose" name="purpose" cols="3" rows="3"></textarea>
-            <h5>Details</h5>
-            <h6>Team in charge: </h6>
+            <strong>Title: </strong>
+            <textarea class="form-control" [(ngModel)]="clubEvent.title" name="title"></textarea>
+            <strong>Purpose: </strong>
+            <textarea class="form-control mb-2" [(ngModel)]="clubEvent.purpose" name="purpose" cols="3" rows="2"></textarea>
+            <strong>Team in charge: </strong>
             <textarea class="form-control mb-2" [(ngModel)]="clubEvent.teamInCharge" name="teamInCharge" cols="3" rows="3"></textarea>
-            <h6>Posting Date: </h6>
+            <strong>Posting Date: </strong>
+            <p>{{clubEvent.postingDate}}</p>
             <textarea class="form-control mb-2" [(ngModel)]="clubEvent.postingDate" name="postingDate" cols="3" rows="3"></textarea>
-            <h6>Draft Deadline: </h6>
+            <strong>Draft Deadline: </strong>
+            <p>{{clubEvent.draftDeadline}}</p>
             <textarea class="form-control mb-2" [(ngModel)]="clubEvent.draftDeadline" name="draftDeadline" cols="3" rows="3"></textarea>
-            <h6>Specifications: </h6>
+            <strong>Specifications: </strong>
             <textarea class="form-control mb-2" [(ngModel)]="clubEvent.specifications" name="specifications" cols="3" rows="3"></textarea>
             
         </form>    

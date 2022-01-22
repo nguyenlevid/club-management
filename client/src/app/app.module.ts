@@ -43,6 +43,7 @@ import { HasRoleDirective } from './_directives/has-role.directive';
 import { UserManagementComponent } from './admin/user-management/user-management.component';
 import { PhotoManagementComponent } from './admin/photo-management/photo-management.component';
 import { RolesModalComponent } from './modals/roles-modal/roles-modal.component';
+import { EventManagementComponent } from './admin/event-management/event-management.component';
 
 registerLocaleData(en);
 
@@ -76,7 +77,8 @@ registerLocaleData(en);
     HasRoleDirective,
     UserManagementComponent,
     PhotoManagementComponent,
-    RolesModalComponent
+    RolesModalComponent,
+    EventManagementComponent
   ],
   imports: [
     BrowserModule,
