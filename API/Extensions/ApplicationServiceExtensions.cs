@@ -1,11 +1,6 @@
-using API.Data;
-using API.Helpers;
-using API.Interfaces;
-using API.Services;
-using API.SignalR;
-using Microsoft.EntityFrameworkCore;
 
-namespace API.Extensions 
+
+namespace API.Extensions
 {
     public static class ApplicationServiceExtensions
     {

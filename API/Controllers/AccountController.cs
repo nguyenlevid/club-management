@@ -1,13 +1,5 @@
-using API.Entities;
-using Microsoft.AspNetCore.Mvc;
-using API.DTOs;
-using Microsoft.EntityFrameworkCore;
-using API.Interfaces;
-using Microsoft.AspNetCore.Identity;
-using AutoMapper;
+namespace API.Controllers;
 
-namespace API.Controllers
-{
     public class AccountController : BaseApiController
     {
         private readonly SignInManager<AppUser> _signInManager;
@@ -84,4 +76,3 @@ namespace API.Controllers
             return await _userManager.Users.AnyAsync(x => x.UserName == username.ToLower());
         }
     }
-}
