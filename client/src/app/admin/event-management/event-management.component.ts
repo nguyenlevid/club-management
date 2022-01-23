@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ClubEvent } from 'src/app/_models/event';
 import { EventsService } from 'src/app/_services/events.service';
@@ -37,8 +37,8 @@ export class EventManagementComponent implements OnInit {
       title: [this.clubEvent.title, Validators.required],
       purpose: [this.clubEvent.purpose, Validators.required],
       teamInCharge: [this.clubEvent.teamInCharge, Validators.required],
-      postingDate: [this.clubEvent.postingDate, Validators.required],
-      draftDeadline: [this.clubEvent.draftDeadline, Validators.required],
+      postingDate: [this.clubEvent.postingDate.toUTCString, Validators.required],
+      draftDeadline: [this.clubEvent.draftDeadline.toUTCString, Validators.required],
       specifications: [this.clubEvent.specifications, Validators.required],
       })
   }
@@ -47,8 +47,8 @@ export class EventManagementComponent implements OnInit {
     this.clubEvent.title = this.editForm.value.title;
     this.clubEvent.purpose = this.editForm.value.purpose;
     this.clubEvent.teamInCharge = this.editForm.value.teamInCharge;
-    this.clubEvent.postingDate = this.editForm.value.postingDate;
-    this.clubEvent.draftDeadline = this.editForm.value.draftDeadline;
+    this.clubEvent.postingDate = this.editForm.value.postingDate.toUTCString;
+    this.clubEvent.draftDeadline = this.editForm.value.draftDeadline.toUTCString;
     this.clubEvent.specifications = this.editForm.value.specifications;
 
     console.log(this.clubEvent)
