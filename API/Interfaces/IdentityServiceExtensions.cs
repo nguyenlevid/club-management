@@ -1,5 +1,3 @@
-
-
 namespace API.Interfaces
 {
     public static class IdentityServiceExtensions
@@ -9,12 +7,21 @@ namespace API.Interfaces
             services.AddIdentityCore<AppUser>(opt => 
             {
                 opt.Password.RequireNonAlphanumeric = false;
+                opt.Tokens.ProviderMap.Add("CustomPasswordResetTokenProvider",
+                    new TokenProviderDescriptor(
+                        typeof(PasswordResetTokenProvider<AppUser>)
+                    ));
+                opt.Tokens.PasswordResetTokenProvider = "CustomPasswordResetTokenProvider";
             })
+                .AddTokenProvider<DataProtectorTokenProvider<AppUser>>(TokenOptions.DefaultProvider)
                 .AddRoles<AppRole>()
                 .AddRoleManager<RoleManager<AppRole>>()
                 .AddSignInManager<SignInManager<AppUser>>()
                 .AddRoleValidator<RoleValidator<AppRole>>()
                 .AddEntityFrameworkStores<DataContext>();
+                
+
+            services.AddTransient<PasswordResetTokenProvider<AppUser>>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {

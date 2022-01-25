@@ -43,7 +43,32 @@ namespace API.Controllers;
                 KnownAs = user.KnownAs,
                 Gender = user.Gender,
                 Team = user.Team,
+                Email = user.Email,
             };
+        }
+
+        [HttpPost("reset-password")]
+        [AllowAnonymous]
+        public async Task<ActionResult<string>> ResetPassword(ResetPasswordDto resetPasswordDto, [FromQuery] string token)
+        {
+            var user = await _userManager.FindByEmailAsync(resetPasswordDto.Email);
+            if (user == null) return BadRequest("No user with this email exists");
+
+            var result = await _userManager.ResetPasswordAsync(user, token,
+                resetPasswordDto.Password);
+            
+            if (!result.Succeeded) return BadRequest("Problem resetting password");
+            
+            return Ok("Password reset successfully");
+        }
+
+        [HttpGet("reset-password")]
+        public async Task<ActionResult<string>> GetResetPasswordToken()
+        {
+            var user = await _userManager.FindByNameAsync(User.GetUsername());
+            if (user == null) return NotFound();
+            
+            return await _userManager.GeneratePasswordResetTokenAsync(user);
         }
 
         [HttpPost("login")]
@@ -68,6 +93,7 @@ namespace API.Controllers;
                 KnownAs = user.KnownAs,
                 Gender = user.Gender,
                 Team = user.Team,
+                Email = user.Email,
             };
         }
 
