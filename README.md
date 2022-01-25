@@ -1,4 +1,4 @@
-#VNUK-Club-Management
+# VNUK-Club-Management
 
 * This is a project to manage clubs at school
 * Frontend: Angular TypeScript
