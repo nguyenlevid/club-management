@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./forgot-password.component.css']
 })
 export class ForgotPasswordComponent implements OnInit {
+  authUrl = environment.authUrl;
   public forgotPasswordForm: FormGroup;
   public successMessage: string;
   public errorMessage: string;
@@ -32,7 +33,7 @@ export class ForgotPasswordComponent implements OnInit {
     const forgotPass = { ...forgotPasswordFormValue };
     const forgotPassDto: ForgotPassword = {
       email: forgotPass.email,
-      clientURI: 'http://localhost:4200/resetpassword'
+      clientURI: this.authUrl + 'resetpassword',
     }
     this.accountService.forgotPasswordRequest('account/forgotpassword', forgotPassDto)
     .subscribe(_ => {
