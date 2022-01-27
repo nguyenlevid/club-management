@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
@@ -37,6 +39,8 @@ const routes: Routes = [
     ]
   },
   {path: 'errors', component: TestErrorsComponent},
+  {path: 'forgotpassword', component: ForgotPasswordComponent},
+  {path: 'resetpassword', component: ResetPasswordComponent},
   {path: 'not-found', component: NotFoundComponent},
   {path: 'server-error', component: ServerErrorComponent},
   {path: '**', component: NotFoundComponent, pathMatch: 'full'},

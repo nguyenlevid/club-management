@@ -2,19 +2,14 @@ namespace API.DTOs
 {
     public class ResetPasswordDto
     {
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
-
-        [Required]
-        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "Password is required")]
         public string Password { get; set; }
 
-        [Required]
-        [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "Confirm password and password must macth")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
+        public string Email { get; set; }
         public string Token { get; set; }
+
     }
 }

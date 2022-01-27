@@ -12,6 +12,7 @@ namespace API.Interfaces
                         typeof(PasswordResetTokenProvider<AppUser>)
                     ));
                 opt.Tokens.PasswordResetTokenProvider = "CustomPasswordResetTokenProvider";
+                opt.User.RequireUniqueEmail = true;
             })
                 .AddTokenProvider<DataProtectorTokenProvider<AppUser>>(TokenOptions.DefaultProvider)
                 .AddRoles<AppRole>()
@@ -20,7 +21,8 @@ namespace API.Interfaces
                 .AddRoleValidator<RoleValidator<AppRole>>()
                 .AddEntityFrameworkStores<DataContext>();
                 
-
+            services.Configure<DataProtectionTokenProviderOptions>(opt =>
+                opt.TokenLifespan = TimeSpan.FromHours(2));
             services.AddTransient<PasswordResetTokenProvider<AppUser>>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
