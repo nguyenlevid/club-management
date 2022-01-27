@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.WebUtilities;
+
 namespace API.Controllers;
 
     public class AccountController : BaseApiController
@@ -5,11 +7,13 @@ namespace API.Controllers;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly ITokenService _tokenService;
         private readonly IMapper _mapper;
+        private readonly IEmailSender _sender;
 
         public readonly UserManager<AppUser> _userManager;
         public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, 
-            ITokenService tokenService, IMapper mapper)
+            ITokenService tokenService, IMapper mapper, IEmailSender sender)
         {
+            _sender = sender;
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenService = tokenService;
@@ -43,8 +47,51 @@ namespace API.Controllers;
                 KnownAs = user.KnownAs,
                 Gender = user.Gender,
                 Team = user.Team,
+                Email = user.Email,
             };
         }
+
+        [HttpPost("ResetPassword")]
+        [AllowAnonymous]
+        public async Task<ActionResult> ResetPassword([FromBody]ResetPasswordDto resetPasswordDto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+            var user = await _userManager.FindByEmailAsync(resetPasswordDto.Email);
+            if (user == null)
+                return BadRequest("Invalid Request");
+            var resetPassResult = await _userManager.ResetPasswordAsync(user, resetPasswordDto.Token, resetPasswordDto.Password);
+            if (!resetPassResult.Succeeded)
+            {
+                var errors = resetPassResult.Errors.Select(e => e.Description);
+                return BadRequest(new { Errors = errors });
+            }
+            return Ok();
+        }
+
+        [HttpPost("ForgotPassword")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto forgotPasswordDto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            var user = await _userManager.FindByEmailAsync(forgotPasswordDto.Email);
+            if (user == null)
+                return BadRequest("Invalid Request");
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);         
+            var param = new Dictionary<string, string>
+            {
+                {"token", token },
+                {"email", forgotPasswordDto.Email }
+            };
+
+            var callbackUrl = QueryHelpers.AddQueryString(forgotPasswordDto.ClientURI, param);
+
+            await _sender.SendEmailAsync( user.Email, "Click on the link to reset your password", "Please reset your password by clicking here: <a href=\"" + callbackUrl + "\">link</a>");
+
+            return Ok();
+}
 
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
@@ -68,6 +115,7 @@ namespace API.Controllers;
                 KnownAs = user.KnownAs,
                 Gender = user.Gender,
                 Team = user.Team,
+                Email = user.Email,
             };
         }
 

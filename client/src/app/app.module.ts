@@ -45,6 +45,8 @@ import { PhotoManagementComponent } from './admin/photo-management/photo-managem
 import { RolesModalComponent } from './modals/roles-modal/roles-modal.component';
 import { EventManagementComponent } from './admin/event-management/event-management.component';
 import { ConfirmDialogComponent } from './modals/confirm-dialog/confirm-dialog.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
 
 registerLocaleData(en);
 
@@ -80,7 +82,9 @@ registerLocaleData(en);
     PhotoManagementComponent,
     RolesModalComponent,
     EventManagementComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

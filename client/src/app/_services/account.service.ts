@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 import {map} from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { ForgotPassword } from '../_models/forgotPassword';
+import { ResetPassword } from '../_models/resetPassword';
 import { User } from '../_models/user';
 import { PresenceService } from './presence.service';
 
@@ -51,6 +53,14 @@ export class AccountService {
     localStorage.removeItem('user');
     this.currentUserSource.next(null);
     this.presence.stopHubConnection();
+  }
+
+  forgotPasswordRequest(route: string, body: ForgotPassword) {
+    return this.http.post(this.baseUrl + route, body);
+  }
+
+  resetPassword = (route: string, body: ResetPassword) => {
+    return this.http.post(this.baseUrl + route, body);
   }
 
   getDecodedToken(token) {

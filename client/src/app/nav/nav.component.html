@@ -50,5 +50,8 @@
               placeholder="Password">
             <button class="btn btn-success" type="submit">Login</button>
           </form>
+          <div *ngIf="!(accountService.currentUser$ | async)">
+            <a routerLink='/forgotpassword'> Forgot Password </a>
+          </div>
         </div>
   </nav>
