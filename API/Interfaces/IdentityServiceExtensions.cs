@@ -22,7 +22,7 @@ namespace API.Interfaces
                 .AddEntityFrameworkStores<DataContext>();
                 
             services.Configure<DataProtectionTokenProviderOptions>(opt =>
-                opt.TokenLifespan = TimeSpan.FromHours(2));
+                opt.TokenLifespan = TimeSpan.FromMinutes(15));
             services.AddTransient<PasswordResetTokenProvider<AppUser>>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

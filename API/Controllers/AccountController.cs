@@ -59,7 +59,7 @@ namespace API.Controllers;
                 return BadRequest();
             var user = await _userManager.FindByEmailAsync(resetPasswordDto.Email);
             if (user == null)
-                return BadRequest("Invalid Request");
+                return BadRequest("No user with such email");
             var resetPassResult = await _userManager.ResetPasswordAsync(user, resetPasswordDto.Token, resetPasswordDto.Password);
             if (!resetPassResult.Succeeded)
             {
@@ -70,6 +70,7 @@ namespace API.Controllers;
         }
 
         [HttpPost("ForgotPassword")]
+        [AllowAnonymous]
         public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto forgotPasswordDto)
         {
             if (!ModelState.IsValid)

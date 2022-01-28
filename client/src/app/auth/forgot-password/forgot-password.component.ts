@@ -15,7 +15,6 @@ export class ForgotPasswordComponent implements OnInit {
   public successMessage: string;
   public errorMessage: string;
   public showSuccess: boolean;
-  public showError: boolean;
   constructor(private accountService : AccountService) { }
   ngOnInit(): void {
     this.forgotPasswordForm = new FormGroup({
@@ -29,7 +28,7 @@ export class ForgotPasswordComponent implements OnInit {
     return this.forgotPasswordForm.controls[controlName].hasError(errorName)
   }
   public forgotPassword = (forgotPasswordFormValue) => {
-    this.showError = this.showSuccess = false;
+    this.showSuccess = false;
     const forgotPass = { ...forgotPasswordFormValue };
     const forgotPassDto: ForgotPassword = {
       email: forgotPass.email,
@@ -39,10 +38,6 @@ export class ForgotPasswordComponent implements OnInit {
     .subscribe(_ => {
       this.showSuccess = true;
       this.successMessage = 'The link has been sent, please check your email to reset your password.'
-    },
-    err => {
-      this.showError = true;
-      this.errorMessage = err;
     })
   }
 

@@ -25,7 +25,7 @@ export class ResetPasswordComponent implements OnInit {
         confirm: new FormControl('', [Validators.required, this.matchValues('password')]),
       });
       this.resetPasswordForm.controls.password.valueChanges.subscribe(() => {
-      this.resetPasswordForm.controls.confirmPassword.updateValueAndValidity();
+        this.resetPasswordForm.controls.confirm.updateValueAndValidity();
       })
 
     
@@ -39,13 +39,6 @@ export class ResetPasswordComponent implements OnInit {
       }
     }
 
-    validateControl = (controlName: string) => {
-      return this.resetPasswordForm.controls[controlName].invalid && this.resetPasswordForm.controls[controlName].touched
-    }
-    
-    hasError = (controlName: string, errorName: string) => {
-      return this.resetPasswordForm.controls[controlName].hasError(errorName)
-    }
     
     resetPassword = (resetPasswordFormValue) => {
       this.showError = this.showSuccess = false;
