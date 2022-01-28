@@ -23,3 +23,10 @@ img {
     border: 2px solid #fff;
     display: inline;
 }
+
+.homeicon {
+  max-height: 30px;
+  max-width: 30px;
+  border: 2px solid #fff;
+  display: inline;
+}

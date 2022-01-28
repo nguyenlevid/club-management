@@ -1,7 +1,6 @@
-
 <nav class="navbar navbar-custom navbar-expand-md fixed-top ">
     <div class="container">
-        <a class="navbar-brand" routerLink='/' routerLinkActive="active">GDSC</a>
+        <a class="navbar-brand" routerLink='/' routerLinkActive="active" style="font-weight: 900;">< GDSC /></a>
           <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="accountService.currentUser$ | async">
             <ng-container *ngIf="accountService.currentUser$ | async">
               <li class="nav-item">
@@ -48,7 +47,7 @@
               class="form-control me-sm-2"
               type="password"
               placeholder="Password">
-            <button class="btn btn-success" type="submit">Login</button>
+            <button [disabled]="!model.username || !model.password" class="btn btn-success" type="submit">Login</button>
           </form>
           <div *ngIf="!(accountService.currentUser$ | async)">
             <strong style="font-style: italic;"><a routerLink='/forgotpassword'> Forgot Password </a></strong>
