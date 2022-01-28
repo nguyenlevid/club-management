@@ -17,7 +17,7 @@ namespace API.DTOs
         [Required] public string Team { get; set; }
 
         [Required]
-        [StringLength(8, MinimumLength=4)]
+        [StringLength(32, MinimumLength=6)]
         public string Password { get; set; } = "Pa$$w0rd";
     }
 }

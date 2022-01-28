@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-custom navbar-expand-md fixed-top ">
     <div class="container">
-        <a class="navbar-brand" routerLink='/' routerLinkActive="active">Club ABC</a>
+        <a class="navbar-brand" routerLink='/' routerLinkActive="active">GDSC</a>
           <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="accountService.currentUser$ | async">
             <ng-container *ngIf="accountService.currentUser$ | async">
               <li class="nav-item">
@@ -51,7 +51,7 @@
             <button class="btn btn-success" type="submit">Login</button>
           </form>
           <div *ngIf="!(accountService.currentUser$ | async)">
-            <a routerLink='/forgotpassword'> Forgot Password </a>
+            <strong style="font-style: italic;"><a routerLink='/forgotpassword'> Forgot Password </a></strong>
           </div>
         </div>
   </nav>
