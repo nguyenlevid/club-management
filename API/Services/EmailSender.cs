@@ -23,7 +23,7 @@ namespace API.Services
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()
             {
-                From = new EmailAddress("viet.nguyen200215@vnuk.edu.vn", "Password Recovery"),
+                From = new EmailAddress("gdsc.devclub@vnuk.edu.vn", "password recovery"),
                 Subject = subject,
                 PlainTextContent = message,
                 HtmlContent = message

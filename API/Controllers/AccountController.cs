@@ -89,7 +89,7 @@ namespace API.Controllers;
 
             var callbackUrl = QueryHelpers.AddQueryString(forgotPasswordDto.ClientURI, param);
 
-            await _sender.SendEmailAsync( user.Email, "Click on the link to reset your password", "Please reset your password by clicking here: <a href=\"" + callbackUrl + "\">link</a>");
+            await _sender.SendEmailAsync( user.Email, "GDSC ITS support: (Link invalid after 15 minutes)", "Please reset your password by clicking here: <a href=\"" + callbackUrl + "\">link</a>");
 
             return Ok();
 }
