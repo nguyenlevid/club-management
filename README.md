@@ -1,5 +1,10 @@
 # VNUK-Club-Management
 
+* Demo: https://vnukclubmanagement.herokuapp.com/
+* Login credentials: 
+  username: admin
+  password: Pa$$w0rd
+
 * This is a project to manage clubs at school
 * Frontend: Angular TypeScript
 * Backend: ASP.NET 6
